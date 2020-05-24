@@ -23,6 +23,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -128,8 +129,6 @@ public class BaseTest {
 			postResultsToTestRail = true;
 		}
 		
-		System.out.println("POST Results = " + postResultsToTestRail);
-		System.out.println("POST Results2 = " + prop.getValue("test.rail.post.result")); 
     }
  
     @AfterTest(alwaysRun = true)
@@ -168,7 +167,11 @@ public class BaseTest {
 		String chromeDriverPath = prop.getValue("web.driver.chrome");
 
 		System.setProperty(chromeDriverPath, chromePath);
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--no-sandbox");
+		options.addArguments("--headless");
+		options.addArguments("--disable-dev-shm-usage");
+		driver = new ChromeDriver(options);
 	}
 
 	/**
