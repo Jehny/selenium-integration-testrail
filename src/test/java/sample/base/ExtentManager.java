@@ -27,8 +27,7 @@ public class ExtentManager {
 	private List<ScreenImage> imagesList;
 	
 	public ExtentManager() {
-//		reportFolder = "Report_" + BaseTest.getCurrentDate();
-		reportFolder = "Report_";
+		reportFolder = "Report_" + BaseTest.getCurrentDate();
 		System.out.println(" report = " + BaseTest.RESULTS_PATH + separator + reportFolder);
 		reportPath = BaseTest.RESULTS_PATH + separator + reportFolder;
 		screenshotsFolder = "screenshots";
