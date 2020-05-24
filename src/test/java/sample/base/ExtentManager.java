@@ -35,7 +35,8 @@ public class ExtentManager {
 	}
 	
 	protected void createExtent(String reportName){
-		this.reportName = reportName + ".html";			
+//		this.reportName = reportName + ".html";
+		this.reportName = "TestSuite" + ".html";	
 		extent = new ExtentReports();
 		extent.setSystemInfo("Environment", BaseTest.currentEnvironment);
 		extent.attachReporter(getHtmlReporter());
@@ -43,6 +44,7 @@ public class ExtentManager {
  
 	private ExtentHtmlReporter getHtmlReporter() {
 		File reportFile = new File(reportPath + separator + reportName);
+//		File reportFile = new File(reportPath + "_" + reportName);
 		reportFile.getParentFile().mkdirs();
 		htmlReporter = new ExtentHtmlReporter(reportFile);
         htmlReporter.loadXMLConfig("./config/extent-config.xml");
