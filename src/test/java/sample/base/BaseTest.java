@@ -171,6 +171,7 @@ public class BaseTest {
 		options.addArguments("--no-sandbox");
 		options.addArguments("--headless");
 		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--whitelisted-ips");
 		driver = new ChromeDriver(options);
 	}
 
