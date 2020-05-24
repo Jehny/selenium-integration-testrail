@@ -1015,7 +1015,7 @@ public class BaseTest {
 	 * @return a string with the current date
 	 */
 	public static String getCurrentDate() {
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH.mm.ss");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH.mm.ss");
 		Date date = new Date();
 
 		return dateFormat.format(date);
