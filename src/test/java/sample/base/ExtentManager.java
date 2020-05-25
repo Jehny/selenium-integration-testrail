@@ -29,7 +29,7 @@ public class ExtentManager {
 	public ExtentManager() {
 		reportFolder = "Report_" + BaseTest.getCurrentDate();
 		System.out.println(" report = " + BaseTest.RESULTS_PATH + separator + reportFolder);
-		reportPath = BaseTest.RESULTS_PATH + separator + reportFolder;
+		reportPath = BaseTest.RESULTS_PATH + separator + reportFolder + separator + "Test";
 		screenshotsFolder = "screenshots";
 		imagesList = new ArrayList<ScreenImage>();
 	}
@@ -67,14 +67,7 @@ public class ExtentManager {
 		folder.setExecutable(true);
 		folder.setWritable(true);
 		System.out.println("Report name folder Customize: = " + folder);
-		 System.out.println("Is Write allow : " + folder.canWrite());
-//		 try {
-//			Runtime.getRuntime().exec("chmod 777 file");
-//			System.out.println("Runtime chmod 777 file ");
-//		} catch (IOException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
+		System.out.println("Is Write allow : " + folder.canWrite());
 		String directoryName = folder.toString();
 
 		if (new File(directoryName).exists()) {
