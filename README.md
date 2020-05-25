@@ -10,6 +10,20 @@ This project was developed in:
 
 > **Config Paths:** All paths are with /  
 
+### Instalation
+
+> 1. Download the project
+
+> 2. Import as project maven
+
+> 3. Configure the Build Path to actual JAVA
+
+> 4. Configure properties file with your credentials, URL and testrail credentials.
+
+> 5. Click right button under project root and Run as -> Maven install
+
+> 6. To run the project many times: Click right button under project root and Run as -> Maven test
+
 ##### Running the project without library JAR based on this project
 
 ### Structure
@@ -44,11 +58,11 @@ This project was developed in:
 
 > - **test.rail.password** = [Pass]
 
-> - **test.rail.suite.id** = 0
+> - **test.rail.suite.id** = [Suite ID in TestRail (Can not be NULL, put 0 if you don't have)]
 
-> - **test.rail.project.id** = 1
+> - **test.rail.project.id** = [Project ID in TestRail]
 
-> - **test.rail.runname.prefix** = iDevOps
+> - **test.rail.runname.prefix** = [Project name for example]
 
 > By default value is false on BaseTest
 If you don't want post the result to testRail not set value.
@@ -62,10 +76,54 @@ e.g. test.rail.post.result
 
 ##### Folder test-suites:
 
+###### test-suites file:
+
 > This file you will go put the test class that you want to run.
 
-###### test-suites:
+Example:
+```xml
+<classes>
+  <class name="sample.tests.SimplePageTest" />
+  <class name="sample.tests.SimplePageTest2" />
+</classes> 
+```
+OR
 
+```xml
+<classes>
+  <class name="sample.tests.SimplePageTest" />
+</classes>
+<classes>
+  <class name="sample.tests.SimplePageTest2" />
+</classes> 
+```
+
+There are some properties as:
+
+>  - **Environment** and **Browser** that it should be informed
+
+#### Test Cases Scripts and Test Case TestRail
+
+> If you want run the test cases on Test rail with scripts you should put testcaseId in your test.
+e.g:
+
+```java
+@Test
+@TestRail(testCaseId = {1})
+public void test() throws IOException, APIException, InterruptedException {
+  page.login();
+}
+```
+
+OR 
+
+```java
+@Test
+@TestRail(testCaseId = {1, 2, 3})
+public void test() throws IOException, APIException, InterruptedException {
+  page.login();
+}
+```
 
 ##### Running the project using library JAR based on this project
 
