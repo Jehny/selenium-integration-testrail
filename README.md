@@ -158,6 +158,7 @@ If you want only use the options and do your own implementation use the library.
 > 4. To use this methods and testrail integration in the Page Objects and Test Cases extends to BaseTest Class.
 
 e.g: 
+
 ```java
 public class SimplePageTest extends BaseTest {}
 ```
