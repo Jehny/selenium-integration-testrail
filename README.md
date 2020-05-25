@@ -62,10 +62,31 @@ e.g. test.rail.post.result
 
 ##### Folder test-suites:
 
+###### test-suites file:
+
 > This file you will go put the test class that you want to run.
 
-###### test-suites:
+Example:
+```xml
+<classes>
+  <class name="sample.tests.SimplePageTest" />
+  <class name="sample.tests.SimplePageTest2" />
+</classes> 
+```
+OR
 
+```xml
+<classes>
+  <class name="sample.tests.SimplePageTest" />
+</classes>
+<classes>
+  <class name="sample.tests.SimplePageTest2" />
+</classes> 
+```
+
+There are some properties as:
+
+>  - **Environment** and **Browser** that it should be informed
 
 ##### Running the project using library JAR based on this project
 
