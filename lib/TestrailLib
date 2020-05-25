@@ -1,1 +1,11 @@
 library
+
+add the dependency in your project
+
+<dependency>
+    <groupId>automationtestrail</groupId>
+    <artifactId>automation</artifactId>
+    <version>1.0</version>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/lib/selenium-testrail-integration.jar</systemPath>
+</dependency>
