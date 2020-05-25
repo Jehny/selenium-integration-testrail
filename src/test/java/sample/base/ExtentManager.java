@@ -64,8 +64,17 @@ public class ExtentManager {
 	 */
 	private void customizeHTML(String reportPath, String reportName) {
 		File folder = new File(reportPath);
+		folder.setExecutable(true);
 		folder.setWritable(true);
 		System.out.println("Report name folder Customize: = " + folder);
+		 System.out.println("Is Write allow : " + folder.canWrite());
+		 try {
+			Runtime.getRuntime().exec("chmod 777 file");
+			System.out.println("Runtime chmod 777 file ");
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		String directoryName = folder.toString();
 
 		if (new File(directoryName).exists()) {
