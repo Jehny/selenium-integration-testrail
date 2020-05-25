@@ -1,5 +1,4 @@
 # Selenium JAVA integration TESTRAIL
-
 ###Information environment
 
 This project was developed in:
@@ -63,27 +62,6 @@ e.g. test.rail.post.result
 #####Folder test-suites:
 
 > This file you will go put the test class that you want to run.
-E.g.: 
-
-... 
-
-<classes>
-	<class name="sample.tests.SimplePageTest" />
-	<class name="sample.tests.SimplePageTest2" />
-</classes>
-
-...
-
-or 
-
-... 
-
-<classes>
-	<class name="sample.tests.SimplePageTest2" />
-</classes>
-
-...
-
 
 ######test-suites:
 
