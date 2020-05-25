@@ -58,11 +58,11 @@ This project was developed in:
 
 > - **test.rail.password** = [Pass]
 
-> - **test.rail.suite.id** = 0
+> - **test.rail.suite.id** = [Suite ID in TestRail (Can not be NULL, put 0 if you don't have)]
 
-> - **test.rail.project.id** = 1
+> - **test.rail.project.id** = [Project ID in TestRail]
 
-> - **test.rail.runname.prefix** = iDevOps
+> - **test.rail.runname.prefix** = [Project name for example]
 
 > By default value is false on BaseTest
 If you don't want post the result to testRail not set value.
