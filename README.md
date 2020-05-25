@@ -1,3 +1,5 @@
+![](https://github.com/Jehny/selenium-integration-testrail/blob/master/testrail_selenium.png)
+
 # Selenium JAVA integration TESTRAIL
 
 ### Information environment
