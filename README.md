@@ -125,6 +125,12 @@ public void test() throws IOException, APIException, InterruptedException {
 }
 ```
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
 ### Running the project using library JAR based on this project
 
 If you want only use the options and do your own implementation use the library.
