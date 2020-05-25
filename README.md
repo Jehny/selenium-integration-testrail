@@ -10,6 +10,20 @@ This project was developed in:
 
 > **Config Paths:** All paths are with /  
 
+### Instalation
+
+> 1. Download the project
+
+> 2. Import as project maven
+
+> 3. Configure the Build Path to actual JAVA
+
+> 4. Configure properties file with your credentials, URL and testrail credentials.
+
+> 5. Click right button under project root and Run as -> Maven install
+
+> 6. To run the project many times: Click right button under project root and Run as -> Maven test
+
 ##### Running the project without library JAR based on this project
 
 ### Structure
@@ -87,6 +101,29 @@ OR
 There are some properties as:
 
 >  - **Environment** and **Browser** that it should be informed
+
+#### Test Cases Scripts and Test Case TestRail
+
+> If you want run the test cases on Test rail with scripts you should put testcaseId in your test.
+e.g:
+
+```java
+@Test
+@TestRail(testCaseId = {1})
+public void test() throws IOException, APIException, InterruptedException {
+  page.login();
+}
+```
+
+OR 
+
+```java
+@Test
+@TestRail(testCaseId = {1, 2, 3})
+public void test() throws IOException, APIException, InterruptedException {
+  page.login();
+}
+```
 
 ##### Running the project using library JAR based on this project
 
