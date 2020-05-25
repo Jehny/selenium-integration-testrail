@@ -1,5 +1,6 @@
 # Selenium JAVA integration TESTRAIL
-###Information environment
+
+### Information environment
 
 This project was developed in:
 
@@ -9,31 +10,31 @@ This project was developed in:
 
 > **Config Paths:** All paths are with /  
 
-#####Running the project without library JAR based on this project
+##### Running the project without library JAR based on this project
 
-###Structure
+### Structure
 
-#####Package Base:
+##### Package Base:
 
 > This package there are classes responsible for reports, generic methods, browser settings and settings about testrail methods. E.g.: BaseTest it is responsible to connect reports and TESTRAIL API. The ReportTestListener it is responsible by reports and logs on HTML Report and log on TESTRAIL. 
 
-#####Package Page:
+##### Package Page:
 
 > This package you will go to put all page object.
 
-#####Package Tests:
+##### Package Tests:
 
 > This package you will go to put all the test cases. Imagine that each page will be a test suite and each class that will be tested have to be added into test-suite.xml file.
 
-#####Package Testrail:
+##### Package Testrail:
 
 > This package has settings about TestRail API Client and an Interface with settings of a Testng annotation to identify test cases on test classes.  
 
-#####Folder config:
+##### Folder config:
 
 > It has a file that have many properties to config yout environment.
 
-######properties file:
+###### properties file:
 
 > TestRail configurations
 
@@ -55,16 +56,16 @@ e.g. test.rail.post.result
 
 > - **test.rail.post.result** = true (It will put the result at TestRail)
 
-#####Folder results-tests:
+##### Folder results-tests:
 
 > This package has the report test folders. Each execution the project create a new folder with Date and time dynamically. This configuration are in BaseTest class.
 
-#####Folder test-suites:
+##### Folder test-suites:
 
 > This file you will go put the test class that you want to run.
 
-######test-suites:
+###### test-suites:
 
 
-#####Running the project using library JAR based on this project
+##### Running the project using library JAR based on this project
 
