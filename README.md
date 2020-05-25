@@ -125,5 +125,26 @@ public void test() throws IOException, APIException, InterruptedException {
 }
 ```
 
-##### Running the project using library JAR based on this project
+### Running the project using library JAR based on this project
 
+If you want only use the options and do your own implementation use the library.
+
+##### HOW to do
+
+> 1. Do the instalation step
+
+> 2. In pom.xml file add the dependency
+
+```xml
+<dependency>
+    <groupId>automationtestrail</groupId>
+    <artifactId>automation</artifactId>
+    <version>1.0</version>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/lib/selenium-testrail-integration.jar</systemPath>
+</dependency>
+```
+
+> 3. GET the JAR file and add on lib folder in your project
+
+[The JAR file](https://github.com/Jehny/selenium-integration-testrail/tree/master/lib) 
