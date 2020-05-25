@@ -29,7 +29,7 @@ public class ExtentManager {
 	public ExtentManager() {
 		reportFolder = "Report_" + BaseTest.getCurrentDate();
 		System.out.println(" report = " + BaseTest.RESULTS_PATH + separator + reportFolder);
-		reportPath = BaseTest.RESULTS_PATH + separator + reportFolder + separator + "Test";
+		reportPath = BaseTest.RESULTS_PATH + separator + reportFolder;
 		screenshotsFolder = "screenshots";
 		imagesList = new ArrayList<ScreenImage>();
 	}
@@ -44,7 +44,6 @@ public class ExtentManager {
  
 	private ExtentHtmlReporter getHtmlReporter() {
 		File reportFile = new File(reportPath + separator + reportName);
-		System.out.println("Report name folder: = " + reportFile);
 		reportFile.getParentFile().mkdirs();
 		htmlReporter = new ExtentHtmlReporter(reportFile);
         htmlReporter.loadXMLConfig("./config/extent-config.xml");
