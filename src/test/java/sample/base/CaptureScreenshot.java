@@ -24,7 +24,10 @@ public class CaptureScreenshot {
 	 * sub-folder and file name that are retrieved from the current test suite.
 	 * OBS.: No additional name will be added to the screenshot name.
 	 * 
-	 * @return link the link to the screenshot
+	 * @param driver webdriver
+	 * 
+	 * <br>
+	 * return the link to the screenshot
 	 */
 	public void capturePage(WebDriver driver){
 		capturePage(driver, BaseTest.currentTestSuite, BaseTest.currentTestClass, BaseTest.currentTestMethod, null);
@@ -38,7 +41,8 @@ public class CaptureScreenshot {
 	 * 
 	 * @param imageAditionalName
 	 *            the additional name that can be added to the image main name
-	 * @return link the link to the screenshot
+	 * <br>
+	 * return the link to the screenshot
 	 */
 	public void capturePage(WebDriver driver, String imageAditionalName){		
 		capturePage(driver, BaseTest.currentTestSuite, BaseTest.currentTestClass, BaseTest.currentTestMethod, imageAditionalName);

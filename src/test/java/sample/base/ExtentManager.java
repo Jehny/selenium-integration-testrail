@@ -208,7 +208,7 @@ public class ExtentManager {
 	/**
 	 * Adds the given description only to the TestRunner Report Log
 	 * 
-	 * @param description
+	 * @param screenshotURL
 	 *            the description to be added in the Report Log
 	 */
 	public void logScreenshotToTestRunner(String screenshotURL) {

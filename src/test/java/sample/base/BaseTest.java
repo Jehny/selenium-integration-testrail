@@ -339,7 +339,7 @@ public class BaseTest {
 	 * Waits until the given <strong>Text</strong> is present on the page.
 	 * 
 	 * @param type
-	 * 			 the type of parameter that method should be to look. </br>
+	 * 			 the type of parameter that method should be to look. <br>
 	 * 			<strong>id, name, class, css, xpath</strong>
 	 * @param string
 	 *            the text that will be waited to load
@@ -391,7 +391,7 @@ public class BaseTest {
 	 * @throws AssertionError
 	 *             if at least one string isn't found
 	 */
-	public void assertTextPresent(String... strings) throws AssertionError, IOException {
+	public void assertTextPresent(String... strings) {
 		for (String string : strings) {
 			System.out.println("driver = " + driver);
 			assertTrue(driver.getPageSource().contains(string), "The Text '" + string + "' isn't present on the page!");
@@ -1055,9 +1055,9 @@ public class BaseTest {
 	 * <i>Example:</i> Parameter Type equals "id" the method verify for ID.<br>
 	 * The possibilities are <strong> "id", "class", "name", "xpath", "link".</strong> 
 	 * 
-	 * @param type -> type of verification
-	 * @param strings -> <i>className, ids, name or xpath</i>.
-	 * @return
+	 * @param type type of verification
+	 * @param strings  <i> className, ids, name or xpath</i>.
+	 * @return true or false
 	 */
 	public boolean isElementPresentByType(String type, String... strings){
 		boolean present = true;
@@ -1126,7 +1126,11 @@ public class BaseTest {
 	 * <p>
 	 * E.g.: {@code assertTextPresent("link", "element", "String");}
 	 * 
-	 * @param strings
+	 * @param type type of element (e.g: id, name, class, link)
+	 * 
+	 * @param element string element that you choose
+	 * 
+	 * @param string
 	 *            the text that will be validated
 	 * @throws AssertionError
 	 *             if at least one string isn't found
@@ -1245,6 +1249,8 @@ public class BaseTest {
 	
 	/**
      * Create testrun as per test suite in testrail
+     * 
+     * @return dinamic RUn ID to TestRail
      */
     public static long addTestRunInTestRail() throws IOException, APIException {
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy-HH:mm:ss");
@@ -1270,15 +1276,13 @@ public class BaseTest {
 
     /**
      * Use testrail creadential required for TestRail API integration
-     * @param mapDataSet to do
-     * @return to do
+     * 
+     * @return client authentication
      */
     public static APIClient setTestRailClient() {
         APIClient client = new APIClient(TEST_RAIL_URL);
         client.setUser(TEST_RAIL_USER);
         client.setPassword(TEST_RAIL_PASSWORD);
-        
-        System.out.println("Authentication: " + TEST_RAIL_URL + " User: " + TEST_RAIL_USER + " Password: " + TEST_RAIL_PASSWORD);
         return client;
     }
 
@@ -1286,7 +1290,7 @@ public class BaseTest {
      * Get runId which is generated as per specific name
      * @param client to do
      * @param runIdName to do
-     * @returnto do
+     * @return Run ID
      * @throws MalformedURLException to do
      * @throws IOException to do
      * @throws APIException to do

@@ -13,12 +13,12 @@ public class SimplePage extends BaseTest {
 	
 	public void goToPage() {
 		wait = new WebDriverWait(driver, BaseTest.WAIT_TIME);
-		System.out.println(" Driver = " + driver);
-		System.out.println("Passei Aqui: " + BaseTest.currentBaseUrl + " ++++++++++++++++++++++++++++++ ");
+		System.out.println("Driver = " + driver);
+		System.out.println("URL: " + BaseTest.currentBaseUrl + " ++++++++++++++++++++++++++++++ ");
 		driver.get(BaseTest.currentBaseUrl);
 	}
 	
 	public void login() throws InterruptedException, AssertionError, IOException  {
-		System.out.println("Teste de página");
+		System.out.println("Teste de pagina");
 	}
 }
